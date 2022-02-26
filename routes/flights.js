@@ -1,5 +1,6 @@
 import { Router } from 'express'
 import * as flightsCtrl from "../controllers/flights.js"
+
 const router = Router()
 
 // localhost: 3000/flights

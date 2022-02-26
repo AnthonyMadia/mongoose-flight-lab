@@ -8,5 +8,25 @@
 </head>
 <body>
   <h1>All Flights</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Airline</th>
+        <th>Airport</th>
+        <th>Flight Number</th>
+        <th>Departure</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% flights.forEach(flight => {%>
+        <tr>
+          <td><%= flights.airline %> </td>
+          <td><%= flights.airport %> </td>
+          <td><%= flights.flightNo %> </td>
+          <td><%= flights.departs %> </td>
+        </tr>
+      <% }) %> 
+    </tbody>
+  </table>
 </body>
 </html>

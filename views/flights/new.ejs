@@ -8,5 +8,23 @@
 </head>
 <body>
   <h1>New Flights</h1>
+  <form action="/flights" method="POST">
+    <label>Airline:
+      <input type="text" name="airline" required>
+    </label><br>
+    <label>Airport:
+      <select name="airport">
+        <option value="AUS">AUS</option>
+        <option value="DFW">DFW</option>
+        <option value="DEN">DEN</option>
+        <option value="LAX">LAX</option>
+        <option value="SAN">SAN</option>
+      </select>
+    </label><br>
+    <label>Departure:
+      <input type="datetime-local" name="departure">
+    </label><br>
+    <button type="submit">Add Flight</button>
+  </form>
 </body>
 </html>

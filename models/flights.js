@@ -14,7 +14,7 @@ const flightSchema =new Schema({
       return "DEN"
     }
   },
-  flightCo: {
+  flightNo: {
     type: Number,
     min: 10,
     max: 9999

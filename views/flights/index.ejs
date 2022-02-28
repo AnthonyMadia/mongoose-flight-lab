@@ -21,13 +21,16 @@
     <tbody>
       <% flights.forEach(flight => {%>
         <tr>
-          <td><%= flights.airline %> </td>
-          <td><%= flights.airport %> </td>
-          <td><%= flights.flightNo %> </td>
-          <td><%= flights.departs %> </td>
+          <td><%= flight.airline %> </td>
+          <td><%= flight.airport %> </td>
+          <td><%= flight.flightNo %> </td>
+          <td><%= flight.departs %> </td>
         </tr>
       <% }) %> 
     </tbody>
   </table>
+  <a href="/flights/new">
+    <button>Add Flight Page</button>
+  </a>
 </body>
 </html>

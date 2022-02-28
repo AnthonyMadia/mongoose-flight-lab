@@ -20,8 +20,9 @@ const flightSchema =new Schema({
   },
   departs: {
     type: Date,
-    default: Date.now() + 365*24*60*60000,
-  }
+    default: function() {
+      return Date.now() + 365*24*60*60000
+  }}
 })
 
 const Flight = mongoose.model('Flight', flightSchema)

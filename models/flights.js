@@ -15,13 +15,12 @@ const flightSchema =new Schema({
   flightNo: {
     type: Number,
     min: 10,
-    max: 9999
+    max: 9999,
+    default: 10
   },
   departs: {
     type: Date,
-    default: function() {
-      return new Date().getFullYear()
-    },
+    default: Date.now() + 365*24*60*60000,
   }
 })
 

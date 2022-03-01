@@ -3,13 +3,17 @@ import { Flight } from "../models/flights.js"
 function index(req, res) {
   Flight.find({}, function (error, flights) {
     res.render("flights/index", {
-      flights: flights
+      error,
+      flights: flights,
+      title: 'All Flights'
     })
   })
 }
 
 function newFlight(req, res) {
-  res.render('flights/new')
+  res.render('flights/new', {
+    title: "Add Flight"
+  }) 
 }
 
 function create(req, res) {
@@ -22,9 +26,19 @@ function create(req, res) {
   })
 }
 
+function show (req, res) {
+  Flight.findById(req.params.id, function (err, flight) {
+    res.render('flights/show', {
+      title: 'Flight Details',
+      flight: flight
+    })
+  })
+}
+
 //Dont forget to export!
 export {
   index,
   newFlight as new,
-  create
+  create,
+  show
 }

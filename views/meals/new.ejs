@@ -3,14 +3,20 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <body>
-    <h1><%= title %> </h1>
-    <form action="/meals" method="POST">
-      <label>Meal:
-        <input type="text" name="name" required>
-      <button type="submit">Add Meal</button>
-    </form>
+  <h1><%= title %> </h1>
+  <p>
+    Please first ensure that the meal is not in the dropdown
+    <select>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %> </option>
+      <% }) %>
+    </select>
+  </p>
+  <form id="add-performer-form" action="/meals" method="POST">
+    <label for="name-input">Meal: </label>
+    <input type="text" name="name" id="name-input">
+    <button type="submit">Add Meal</button>
+  </form>
 </main>
 
-
-<%- include('../partials/footer') %> 
+<%- include('../partials/footer') %>

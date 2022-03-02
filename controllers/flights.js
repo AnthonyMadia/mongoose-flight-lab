@@ -1,4 +1,4 @@
-import { Flight } from "../models/flights.js"
+import { Flight } from "../models/flight.js"
 
 function index(req, res) {
   Flight.find({}, function (error, flights) {
@@ -60,6 +60,7 @@ function createTicket(req, res) {
     })
   })
 }
+
 
 //Dont forget to export!
 export {

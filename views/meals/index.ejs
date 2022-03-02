@@ -1,0 +1,25 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/meals/index.css">
+<%- include('../partials/nav') %>
+
+
+<main>
+  <body>
+    <h1><%= title %> </h1>
+    <table id="list">
+      <thead>
+        <tr>
+          <th>Meal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% meals.forEach(meal => {%>
+          <tr>
+            <td><%= meal.name %> </td>
+          </tr>
+        <% }) %> 
+      </tbody>
+    </table>
+</main>
+
+<%- include('../partials/footer') %> 

@@ -15,6 +15,8 @@ router.get('/:id/edit', flightsCtrl.edit)
 // POST - localhost: 3000/flights
 router.post('/', flightsCtrl.create)
 
+// PUT - localhost:3000/flights/:id
+router.put('/:id', flightsCtrl.update)
 
 export {
   router

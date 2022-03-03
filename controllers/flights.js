@@ -67,6 +67,10 @@ function createTicket(req, res) {
   })
 }
 
+function addMeal (req, res) {
+  console.log('add')
+}
+
 
 //Dont forget to export!
 export {
@@ -76,5 +80,6 @@ export {
   show,
   edit,
   update,
-  createTicket
+  createTicket,
+  addMeal
 }

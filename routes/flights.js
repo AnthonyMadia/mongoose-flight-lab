@@ -22,6 +22,9 @@ router.post('/:id/meals', flightsCtrl.addMeal)
 // PUT - localhost:3000/flights/:id
 router.put('/:id', flightsCtrl.update)
 
+// DELETE - localhost:3000/flights/:id
+router.delete("/:id", flightsCtrl.delete)
+
 export {
   router
 }

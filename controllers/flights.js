@@ -42,6 +42,12 @@ function show (req, res) {
   })
 }
 
+function deleteFlight(req, res) {
+  Flight.findByIdAndDelete(req.params.id, function(err, flight) {
+    res.redirect("/flights")
+  })
+}
+
 function edit(req, res) {
   Flight.findById(req.params.id, function(err, flight) {
     res.render('flights/edit', {
@@ -77,12 +83,14 @@ function addMeal (req, res) {
 }
 
 
+
 //Dont forget to export!
 export {
   index,
   newFlight as new,
   create,
   show,
+  deleteFlight as delete,
   edit,
   update,
   createTicket,

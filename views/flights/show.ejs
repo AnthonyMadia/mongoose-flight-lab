@@ -23,10 +23,14 @@
       <% }) %>
     </ul>
   </section>
-  <form id="add-meal-to-thing" action="/flights/<%= flight._id%>/meals" method="POST">
+  <form 
+    id="add-meal-to-thing"
+    action="/flights/<%= flight._id %>/meals"
+    method="POST"
+  >
     <select name="mealId">
       <% flight.thing.forEach(meal => { %>
-       <option value="<%= meal._id %>"><%= meal.name %></option>
+        <input value="<%= meal._id %>"><%= meal.name %></option>
       <% }) %>
     </select>
     <button type="submit">Add Meal to Flight</button>
@@ -68,3 +72,6 @@
 </main>
 
 <%- include('../partials/footer') %> 
+
+
+

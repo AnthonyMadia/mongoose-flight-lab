@@ -36,7 +36,7 @@ function show (req, res) {
         res.render('flights/show', {
           flight: flight,
           title: 'Flight Details',
-          mealsNotInFlight: mealsNotInFlight,
+          mealsNotInFlight,
         })
       })
   })
@@ -68,7 +68,12 @@ function createTicket(req, res) {
 }
 
 function addMeal (req, res) {
-  console.log('add')
+  Flight.findById(req.params.id, function (err, flight) {
+    flight.thing.push(req.body.mealId)
+    flight.save(function(err) {
+      res.redirect(`/flights/${flight._id}`)
+    })
+  })
 }
 
 

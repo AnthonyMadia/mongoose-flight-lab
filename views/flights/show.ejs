@@ -30,7 +30,7 @@
   >
     <select name="mealId">
       <% flight.thing.forEach(meal => { %>
-        <input value="<%= meal._id %>"><%= meal.name %></option>
+        <option value="<%= meal._id %>"><%= meal.name %></option>
       <% }) %>
     </select>
     <button type="submit">Add Meal to Flight</button>
